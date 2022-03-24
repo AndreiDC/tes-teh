@@ -1,7 +1,14 @@
-import React from "react";
+import React, { useState } from "react";
 import { Tab } from "../table/Table";
+import { ButtonAddPerson } from "../button-add-person/ButtonAddPerson";
+import { AddPerson } from "../add-person/AddPerson";
 
 export const TableList = () => {
+  const [isShowLogin, setIsShowLogin] = useState(false);
+
+  const handleLoginClick = () => {
+    setIsShowLogin((isShowLogin) => !isShowLogin);
+  };
   return (
     <section className="text-gray-600 body-font">
       <div className="container px-5 py-24 mx-auto">
@@ -10,19 +17,17 @@ export const TableList = () => {
             Employee list
           </h1>
         </div>
+
         <div className=" w-full mx-auto overflow-auto">
-          <div className="relative overflow-x-auto shadow-md sm:rounded-lg">
+          <div className=" justify-center overflow-x-auto shadow-md sm:rounded-lg z-50 ">
             <Tab />
+            <div className="flex justify-center">
+              <AddPerson isShowLogin={isShowLogin} />
+            </div>
           </div>
         </div>
         <div className="flex pl-4 mt-4  w-full mx-auto">
-          <button
-            className="flex ml-auto text-white bg-indigo-500 border-0 py-2 px-6 focus:outline-none hover:bg-indigo-600 rounded"
-            type="button"
-            data-modal-toggle="authentication-modal"
-          >
-            Add person
-          </button>
+          <ButtonAddPerson handleLoginClick={handleLoginClick} />
         </div>
       </div>
     </section>
