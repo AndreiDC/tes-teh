@@ -9,31 +9,31 @@ export const Tab = () => {
             NrCrt
           </th>
           <th scope="col" className="px-6 py-3">
-            Nume
+            FIRST NAME
           </th>
           <th scope="col" className="px-6 py-3">
-            Prenume
+            LAST NAME
           </th>
           <th scope="col" className="px-6 py-3">
-            Varsta
+            AGE
           </th>
           <th scope="col" className="px-6 py-3">
-            Email
+            E-MAIL
           </th>
           <th scope="col" className="px-6 py-3">
-            Localitatea
+            TOWN
           </th>
           <th scope="col" className="px-6 py-3">
-            Descriere
+            DESCRIPTION
           </th>
           <th scope="col" className="px-6 py-3">
-            Competente
+            SKILLS
           </th>
           <th scope="col" className="px-6 py-3">
-            Adaugat
+            ADDED
           </th>
           <th scope="col" className="px-6 py-3">
-            Actiune
+            ACTION
           </th>
           <th scope="col" className="px-6 py-3">
             <span className="sr-only">Edit</span>
